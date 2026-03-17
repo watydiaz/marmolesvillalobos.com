@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Marmoleria Villalobos fabrica e instala cubiertas, barras, escaleras, fachadas y proyectos especiales en marmol, granito y cuarzo.">
-  <title>Marmoleria Villalobos</title>
+  <title>Marmoles Villalobos</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -17,8 +17,9 @@
       <a class="brand" href="#inicio" aria-label="Ir al inicio de Marmoleria Villalobos">
         <img src="img/image.png" alt="Logo de Marmoleria Villalobos" class="brand-logo">
         <span class="brand-text">
-          <strong>Marmoleria</strong>
-          <span>Villalobos</span>
+          <strong>Marvhill</strong>
+          <!-- <span>Villalobos</span>
+            <span>Marhvill</span> -->
         </span>
       </a>
 
@@ -37,9 +38,8 @@
     <section class="hero" id="inicio">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Acabados de piedra con presencia y precision</p>
-          <h1>Transformamos marmol, granito y cuarzo en espacios que perduran.</h1>
-          <p class="hero-text">Diseñamos, fabricamos e instalamos cubiertas, barras, escaleras, fachadas y piezas especiales con una ejecucion limpia, sobria y profesional.</p>
+          <h1>Somos transformadores de lo natural en diseño eterno.</h1>
+          <p class="hero-text">Diseñamos, fabricamos e instalamos superficies en piedra natural o sintetica, creando espacios integrales con carácter único y durable.</p>
 
           <div class="hero-actions">
             <a class="button button-primary" href="#contacto">Solicitar cotizacion</a>
@@ -119,6 +119,27 @@
             <p>Atencion a desarrollos para negocio, recepciones, barras y exhibidores.</p>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section class="metrics-strip" aria-label="Metricas de Marmoleria Villalobos">
+      <div class="container metrics-grid">
+        <article class="metric-card">
+          <strong class="metric-value" data-target="5000" data-prefix="+">0</strong>
+          <span>Proyectos instalados</span>
+        </article>
+        <article class="metric-card">
+          <strong class="metric-value" data-target="12" data-suffix="+">0</strong>
+          <span>Años de experiencia</span>
+        </article>
+        <article class="metric-card">
+          <strong class="metric-value" data-target="4">0</strong>
+          <span>Lineas de calidad</span>
+        </article>
+        <article class="metric-card">
+          <strong class="metric-value" data-target="92" data-suffix="%">0</strong>
+          <span>Clientes satisfechos</span>
+        </article>
       </div>
     </section>
 
@@ -371,22 +392,13 @@
   </a>
 
   <aside class="social-float" aria-label="Redes sociales y contacto rapido">
-    <a class="social-link social-facebook" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" data-label="Facebook">
-      <span class="social-icon"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></span>
-    </a>
     <a class="social-link social-tiktok" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="TikTok" data-label="TikTok">
       <span class="social-icon"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></span>
     </a>
-    <a class="social-link social-instagram" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" data-label="Instagram">
-      <span class="social-icon"><i class="fa-brands fa-instagram" aria-hidden="true"></i></span>
-    </a>
-    <a class="social-link social-email" href="mailto:contacto@marmoleriavillalobos.com" aria-label="Correo electronico" data-label="Email">
-      <span class="social-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
-    </a>
-    <a class="social-link social-phone" href="tel:+520000000000" aria-label="Telefono" data-label="Telefono">
+    <a class="social-link social-phone" href="tel:+573152342955" aria-label="Telefono" data-label="Telefono">
       <span class="social-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
     </a>
-    <a class="social-link social-whatsapp" href="https://wa.me/520000000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" data-label="WhatsApp">
+    <a class="social-link social-whatsapp" href="https://wa.me/573152342955" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" data-label="WhatsApp">
       <span class="social-icon"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></span>
     </a>
   </aside>
@@ -414,5 +426,79 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const animatedSelectors = ".service-card, .metric-card, .process-card, .quality-card, .material-card, .gallery-card, .feature-list article, .contact-form, .location-card";
+      const animatedItems = document.querySelectorAll(animatedSelectors);
+
+      animatedItems.forEach((item) => item.classList.add("js-animate"));
+
+      const metricValues = document.querySelectorAll(".metric-value");
+      const runCounters = () => {
+        metricValues.forEach((el) => {
+          const target = Number(el.dataset.target || 0);
+          const prefix = el.dataset.prefix || "";
+          const suffix = el.dataset.suffix || "";
+          const start = performance.now();
+          const duration = 1300;
+
+          const tick = (now) => {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const current = Math.round(target * eased);
+            el.textContent = `${prefix}${current}${suffix}`;
+
+            if (progress < 1) {
+              requestAnimationFrame(tick);
+            }
+          };
+
+          requestAnimationFrame(tick);
+        });
+      };
+
+      if (prefersReducedMotion) {
+        animatedItems.forEach((item) => item.classList.add("in-view"));
+        metricValues.forEach((el) => {
+          const target = Number(el.dataset.target || 0);
+          const prefix = el.dataset.prefix || "";
+          const suffix = el.dataset.suffix || "";
+          el.textContent = `${prefix}${target}${suffix}`;
+        });
+        return;
+      }
+
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("in-view");
+            revealObserver.unobserve(entry.target);
+          });
+        },
+        { threshold: 0.18, rootMargin: "0px 0px -8% 0px" }
+      );
+
+      animatedItems.forEach((item) => revealObserver.observe(item));
+
+      const metricsSection = document.querySelector(".metrics-strip");
+      if (metricsSection) {
+        const metricsObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              runCounters();
+              metricsObserver.disconnect();
+            });
+          },
+          { threshold: 0.35 }
+        );
+
+        metricsObserver.observe(metricsSection);
+      }
+    })();
+  </script>
 </body>
 </html>

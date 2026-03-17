@@ -26,7 +26,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: var(--color-text);
   background:
     radial-gradient(circle at top left, rgba(239, 125, 18, 0.12), transparent 26%),
@@ -171,7 +171,7 @@ textarea {
 .feature-grid h2,
 .contact-copy h2 {
   margin: 0;
-  font-family: "Playfair Display", serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   line-height: 1.02;
   letter-spacing: -0.03em;
@@ -372,6 +372,86 @@ textarea {
   background: rgba(255, 255, 255, 0.8);
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-soft);
+}
+
+.metrics-strip {
+  padding: 1.2rem 0 0.4rem;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.metric-card {
+  position: relative;
+  padding: 1.35rem 1.2rem;
+  border-radius: var(--radius-md);
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.96) 0%, rgba(247, 237, 224, 0.88) 100%);
+  border: 1px solid rgba(18, 18, 18, 0.08);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.metric-card::before {
+  content: "";
+  position: absolute;
+  inset: auto -20% 0 auto;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(239, 125, 18, 0.26) 0%, rgba(239, 125, 18, 0) 72%);
+  pointer-events: none;
+}
+
+.metric-card strong {
+  display: block;
+  font-size: clamp(1.7rem, 3.4vw, 2.35rem);
+  line-height: 1;
+  color: var(--color-dark);
+  letter-spacing: -0.03em;
+}
+
+.metric-card span {
+  display: block;
+  margin-top: 0.52rem;
+  color: var(--color-text-soft);
+  font-weight: 600;
+}
+
+.metric-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 40px rgba(0, 0, 0, 0.14);
+}
+
+.js-animate {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 520ms ease, transform 520ms ease;
+}
+
+.js-animate.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-card.js-animate:nth-child(2),
+.service-card.js-animate:nth-child(5),
+.gallery-card.js-animate:nth-child(2),
+.gallery-card.js-animate:nth-child(6),
+.quality-card.js-animate:nth-child(2),
+.quality-card.js-animate:nth-child(4) {
+  transition-delay: 90ms;
+}
+
+.service-card.js-animate:nth-child(3),
+.service-card.js-animate:nth-child(6),
+.gallery-card.js-animate:nth-child(3),
+.gallery-card.js-animate:nth-child(7),
+.quality-card.js-animate:nth-child(3) {
+  transition-delay: 160ms;
 }
 
 .service-card h3,
@@ -792,6 +872,7 @@ textarea {
   .process-grid,
   .quality-grid,
   .services-grid,
+  .metrics-grid,
   .material-grid,
   .gallery-grid,
   .feature-list,
@@ -822,6 +903,7 @@ textarea {
   .hero-points,
   .hero-grid,
   .services-grid,
+  .metrics-grid,
   .material-grid,
   .gallery-grid,
   .feature-grid,
@@ -851,6 +933,10 @@ textarea {
 
   .hero-copy h1 {
     max-width: 100%;
+  }
+
+  .metric-card {
+    padding: 1.15rem 1rem;
   }
 
   .social-float {
