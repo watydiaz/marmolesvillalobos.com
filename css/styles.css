@@ -271,7 +271,10 @@ textarea {
 
 .hero-typing {
   display: inline-block;
-  min-height: 1.1em;
+  min-height: 4.6em; /* Altura para dos líneas grandes */
+  height: auto;
+  width: 100%;
+  /* min-height ajustado para cubrir el texto completo */
 }
 
 .hero-typing::after {
