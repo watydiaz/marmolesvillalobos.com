@@ -28,21 +28,21 @@
       </a>
 
       <nav class="site-nav" aria-label="Principal">
-        <a href="#beneficios">Beneficios</a>
+        <a href="#inicio">Inicio</a>
+        <a href="#beneficios">Valores</a>
+        <a href="#metricas">Metricas</a>
+        <a href="#proyectos">Proyectos</a>
         <a href="#servicios">Servicios</a>
         <a href="#materiales">Materiales</a>
         <a href="#proceso-marmol">Proceso</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#elegirnos">Elegirnos</a>
-        <a href="#metricas">Metricas</a>
-        <a href="#medios-de-pago">Medios de pago</a>
+        <a href="#medios-de-pago"> Pago</a>
         <a href="#contacto">Contacto</a>
+        <a href="#ubicacion">Ubicación</a>
       </nav>
 
       <a class="button button-primary desktop-cta" href="#contacto">Cotiza ahora</a>
     </div>
   </header>
-
   <main>
     <section class="hero" id="inicio">
       <div class="container hero-grid">
@@ -250,30 +250,109 @@
       <div class="container">
         <div class="section-heading narrow light">
           <p class="eyebrow">Materiales</p>
-          <h2>Texturas y superficies para cada estilo de proyecto.</h2>
-          <p>Te ayudamos a elegir el material adecuado segun resistencia, mantenimiento, color y presencia visual.</p>
+          <h2>Catálogo de materiales</h2>
+          <p>Explora las principales categorías y descubre los diferentes tipos disponibles en cada una.</p>
+        </div>
+        <div class="catalogo-materiales-grid">
+          <button class="material-categoria-card" onclick="abrirModalMaterial('granito')">
+            <img src="img/materiales/granito.jpg" alt="Granitos y Mármoles" loading="lazy">
+            <span>Granitos y Mármoles</span>
+          </button>
+          <button class="material-categoria-card" onclick="abrirModalMaterial('quartztone')">
+            <img src="img/materiales/quartztone.jpg" alt="Quartztone" loading="lazy">
+            <span>Quartztone</span>
+          </button>
+          <button class="material-categoria-card" onclick="abrirModalMaterial('sinterizado')">
+            <img src="img/materiales/sinterizado.jpg" alt="Sinterizado" loading="lazy">
+            <span>Sinterizado</span>
+          </button>
         </div>
 
-        <div class="material-grid">
-          <article class="material-card">
-            <h3>Marmol</h3>
-            <p>Elegancia natural para espacios sofisticados y acabados de alto impacto.</p>
-          </article>
-          <article class="material-card">
-            <h3>Granito</h3>
-            <p>Gran resistencia para superficies de trabajo y zonas de alto uso.</p>
-          </article>
-          <article class="material-card">
-            <h3>Cuarzo</h3>
-            <p>Imagen contemporanea con textura uniforme y excelente desempeño.</p>
-          </article>
-          <article class="material-card">
-            <h3>Acabados especiales</h3>
-            <p>Opciones adaptadas a concepto, presupuesto y necesidades especificas.</p>
-          </article>
+        <!-- Modal Granitos y Mármoles -->
+        <div class="modal-material" id="modal-material-granito" aria-modal="true" role="dialog" hidden>
+          <div class="modal-material-content">
+            <button class="modal-close" onclick="cerrarModalMaterial('granito')" aria-label="Cerrar">&times;</button>
+            <h3>Granitos y Mármoles</h3>
+            <div class="material-gallery">
+              <div class="material-gallery-item"><img src="img/materiales/granito_aspe.jpg" alt="Aspe"><span>Aspe</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/granito_marroncaribe.jpg" alt="Marrón Caribe"><span>Marrón Caribe</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/granito_aspeegipcio.jpg" alt="Aspe Egipcio"><span>Aspe Egipcio</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/granito_ubatuba.jpg" alt="Verde Ubatuba"><span>Verde Ubatuba</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/granito_sangabriel.jpg" alt="Negro San Gabriel"><span>Negro San Gabriel</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/granito_absoluto.jpg" alt="Negro Absoluto"><span>Negro Absoluto</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/marmol_aspe.jpg" alt="Aspe"><span>Aspe (Mármol)</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/marmol_marroncaribe.jpg" alt="Marrón Caribe"><span>Marrón Caribe (Mármol)</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/marmol_aspeegipcio.jpg" alt="Aspe Egipcio"><span>Aspe Egipcio (Mármol)</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/marmol_ubatuba.jpg" alt="Verde Ubatuba"><span>Verde Ubatuba (Mármol)</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/marmol_sangabriel.jpg" alt="Negro San Gabriel"><span>Negro San Gabriel (Mármol)</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/marmol_absoluto.jpg" alt="Negro Absoluto"><span>Negro Absoluto (Mármol)</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Quartztone -->
+        <div class="modal-material" id="modal-material-quartztone" aria-modal="true" role="dialog" hidden>
+          <div class="modal-material-content">
+            <button class="modal-close" onclick="cerrarModalMaterial('quartztone')" aria-label="Cerrar">&times;</button>
+            <h3>Quartztone</h3>
+            <div class="material-gallery">
+              <div class="material-gallery-item"><img src="img/materiales/quartztone_blancoextra.jpg" alt="Quartztone Blanco Extra"><span>Blanco Extra</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/quartztone_blancopolar.jpg" alt="Quartztone Blanco Polar"><span>Blanco Polar</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/quartztone_blancocalacata.jpg" alt="Quartztone Blanco Calacata"><span>Blanco Calacata</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/quartztone_sandbeige.jpg" alt="Quartztone Sand Beige"><span>Sand Beige</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/quartztone_blancoestelar.jpg" alt="Quartztone Blanco Estelar"><span>Blanco Estelar</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/quartztone_negroestelar.jpg" alt="Quartztone Negro Estelar"><span>Negro Estelar</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/quartztone_grisabsoluto.jpg" alt="Quartztone Gris Absoluto"><span>Gris Absoluto</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/quartztone_grisllovizna.jpg" alt="Quartztone Gris Llovizna"><span>Gris Llovizna</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/quartztone_starwhite.jpg" alt="Quartztone Star White"><span>Star White</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/quartztone_starblack.jpg" alt="Quartztone Star Black"><span>Star Black</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Sinterizado -->
+        <div class="modal-material" id="modal-material-sinterizado" aria-modal="true" role="dialog" hidden>
+          <div class="modal-material-content">
+            <button class="modal-close" onclick="cerrarModalMaterial('sinterizado')" aria-label="Cerrar">&times;</button>
+            <h3>Sinterizado</h3>
+            <div class="material-gallery">
+              <div class="material-gallery-item"><img src="img/materiales/sinterizado_estatuario.jpg" alt="Sinterizado Estatuario"><span>Estatuario</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/sinterizado_borjini.jpg" alt="Sinterizado Borjini"><span>Borjini</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/sinterizado_blancopuro.jpg" alt="Sinterizado Blanco Puro"><span>Blanco Puro</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/sinterizado_negromaquina.jpg" alt="Sinterizado Negro Máquina"><span>Negro Máquina</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/sinterizado_mates.jpg" alt="Sinterizado Mates y Brillantes"><span>Mates y Brillantes</span></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+<script>
+  function abrirModalMaterial(cat) {
+    const modal = document.getElementById('modal-material-' + cat);
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    // Cerrar con click fuera
+    modal.addEventListener('mousedown', function handler(e) {
+      if (e.target === modal) {
+        cerrarModalMaterial(cat);
+        modal.removeEventListener('mousedown', handler);
+      }
+    });
+    // Cerrar con ESC
+    function escHandler(e) {
+      if (e.key === 'Escape') {
+        cerrarModalMaterial(cat);
+        document.removeEventListener('keydown', escHandler);
+      }
+    }
+    document.addEventListener('keydown', escHandler);
+  }
+  function cerrarModalMaterial(cat) {
+    const modal = document.getElementById('modal-material-' + cat);
+    modal.hidden = true;
+    document.body.style.overflow = '';
+  }
+</script>
 
 
     <section class="section process-section" id="proceso-marmol">
@@ -351,7 +430,7 @@
     <section class="section financing-section" id="financiacion">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Medios de financiación</p>
+          <p class="eyebrow">Medios de pago</p>
           <h2>Tu proyecto, a tu ritmo.</h2>
           <p>El mármol y la piedra natural están al alcance de todos. Trabajamos con aliados financieros para que puedas
             hacer realidad tu proyecto sin afectar tu flujo de caja.</p>
