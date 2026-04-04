@@ -224,20 +224,60 @@
             <span class="collage-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
           </button>
         </div>
-        <div id="galeria-videos" class="collage-grid" style="display:none;">
-          <div class="collage-item ci-14" style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; background: #111;">
-            <video controls style="width:100%; max-width:600px; border-radius:12px; background:#000;">
-              <source src="video/14.mp4" type="video/mp4">
-              Tu navegador no soporta la reproducción de video.
-            </video>
-          </div>
-          <div class="collage-item ci-16" style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; background: #111;">
-            <video controls style="width:100%; max-width:600px; border-radius:12px; background:#000;">
-              <source src="video/16.mp4" type="video/mp4">
-              Tu navegador no soporta la reproducción de video.
-            </video>
-          </div>
+        <div id="galeria-videos" class="collage-grid" style="display:none; justify-items: center;">
+          <button class="collage-item ci-14" style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; background: #111; border:none; cursor:pointer;" onclick="abrirModalVideo('video/14.mp4')" aria-label="Ver video 14">
+            <span style="display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; height:100%; color:#fff;">
+              <i class="fa-solid fa-circle-play" style="font-size:4rem; margin-bottom:0.5rem;"></i>
+              <span>Video 14</span>
+            </span>
+          </button>
+          <button class="collage-item ci-16" style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; background: #111; border:none; cursor:pointer;" onclick="abrirModalVideo('video/16.mp4')" aria-label="Ver video 16">
+            <span style="display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; height:100%; color:#fff;">
+              <i class="fa-solid fa-circle-play" style="font-size:4rem; margin-bottom:0.5rem;"></i>
+              <span>Video 16</span>
+            </span>
+          </button>
         </div>
+      <!-- Modal para videos -->
+      <div class="lightbox" id="video-lightbox" role="dialog" aria-modal="true" aria-label="Visor de video" hidden style="background:rgba(5,5,5,0.94);">
+        <button class="lb-close" id="video-lb-close" aria-label="Cerrar" style="position:absolute;top:1.2rem;right:1.4rem;"><i class="fa-solid fa-xmark"></i></button>
+        <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;width:100vw;height:100vh;max-width:900px;max-height:90vh;margin:auto;">
+          <video id="video-modal-player" controls style="width:100%;max-width:800px;max-height:80vh;border-radius:14px;background:#000;outline:none;box-shadow:0 8px 32px rgba(0,0,0,0.18);">
+            <source src="" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+          </video>
+        </div>
+      </div>
+      <script>
+        // Modal de video
+        function abrirModalVideo(src) {
+          const modal = document.getElementById('video-lightbox');
+          const player = document.getElementById('video-modal-player');
+          player.src = src;
+          modal.hidden = false;
+          document.body.style.overflow = 'hidden';
+          player.currentTime = 0;
+          player.play();
+          setTimeout(()=>player.focus(), 200);
+        }
+        function cerrarModalVideo() {
+          const modal = document.getElementById('video-lightbox');
+          const player = document.getElementById('video-modal-player');
+          player.pause();
+          player.src = '';
+          modal.hidden = true;
+          document.body.style.overflow = '';
+        }
+        document.getElementById('video-lb-close').onclick = cerrarModalVideo;
+        document.getElementById('video-lightbox').addEventListener('click', function(e) {
+          if (e.target === this) cerrarModalVideo();
+        });
+        document.addEventListener('keydown', function(e) {
+          const modal = document.getElementById('video-lightbox');
+          if (modal.hidden) return;
+          if (e.key === 'Escape') cerrarModalVideo();
+        });
+      </script>
       </div>
     <script>
       // Tabs galería
@@ -274,34 +314,30 @@
         <div class="section-heading">
           <p class="eyebrow">Servicios</p>
           <h2>Trabajos hechos para durar y lucir impecables.</h2>
-          <p>Desarrollamos piezas funcionales y decorativas para hogar, negocio y proyectos especiales.</p>
+          <p>Especialistas en mesones y barras en mármol y piedra natural. Consulta por WhatsApp y recibe asesoría personalizada para tu proyecto.</p>
         </div>
-
         <div class="cards-grid services-grid">
           <article class="service-card">
-            <h3>Cubiertas de cocina</h3>
-            <p>Superficies elegantes, resistentes y adaptadas al uso cotidiano.</p>
+            <h3>Mesones para cocina</h3>
+            <p>Diseño, fabricación e instalación de mesones en mármol, granito y cuarzo, hechos a medida para tu cocina.</p>
           </article>
           <article class="service-card">
-            <h3>Barras y cubiertas de baño</h3>
-            <p>Acabados limpios con presencia visual y facil mantenimiento.</p>
+            <h3>Barras</h3>
+            <p>Barras elegantes y resistentes para comedores, bares y espacios sociales, con acabados premium.</p>
           </article>
           <article class="service-card">
-            <h3>Escaleras y pisos</h3>
-            <p>Piezas que elevan la arquitectura interior con estructura y detalle.</p>
+            <h3>Mesones para baños</h3>
+            <p>Mesones y lavamanos en mármol o piedra, adaptados a cualquier diseño y espacio.</p>
           </article>
           <article class="service-card">
-            <h3>Fachadas y recubrimientos</h3>
-            <p>Soluciones para interiores y exteriores con identidad fuerte.</p>
+            <h3>Acabados y recubrimientos</h3>
+            <p>Todo tipo de acabados y recubrimientos en mármol para paredes, pisos, escaleras y fachadas.</p>
           </article>
-          <article class="service-card">
-            <h3>Lapidas y piezas especiales</h3>
-            <p>Trabajos personalizados con respeto por el material y el acabado final.</p>
-          </article>
-          <article class="service-card">
-            <h3>Proyectos comerciales</h3>
-            <p>Atencion a desarrollos para negocio, recepciones, barras y exhibidores.</p>
-          </article>
+        </div>
+        <div style="text-align:center; margin-top:2.5rem;">
+          <a class="button button-primary" href="https://wa.me/573152342955" target="_blank" rel="noopener noreferrer" style="font-size:1.15rem; padding:1rem 2.2rem;">
+            Solicita tu cotización por WhatsApp <i class="fa-brands fa-whatsapp" style="margin-left:0.5em;"></i>
+          </a>
         </div>
       </div>
     </section>
