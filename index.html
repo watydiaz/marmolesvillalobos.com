@@ -117,12 +117,12 @@
         </article>
         <article>
           <strong>Innovacion</strong>
-          <p>Diseño sobrio para espacios con caracter premium.</p>
+          <p>Nos mantenemos a la vanguardia en diseños, tendencias y materiales como marmol, granito, y quarztone, creando espacio moderno y unicos.</p>
         </article>
+
         <article>
           <strong>Atencion</strong>
-          <p>Acompañamos a cada cliente de principio a fin atendiendo sus necesidades para ofrecer soluciones a tu
-            medida. </p>
+          <p>Acompañamos a cada cliente de principio a fin atendiendo sus necesidades para ofrecer soluciones a su medida. </p>
         </article>
       </div>
     </section><br>
@@ -131,7 +131,7 @@
        <div class="container">
         <h2><center>Un poco de nuestros numeros</center></h2>
       </div>
-      <div class="container metrics-grid">
+      <div class="container metrics-grid" style="grid-template-columns: repeat(3, minmax(0, 1fr)); justify-items: center;">
         <article class="metric-card">
           <strong class="metric-value" data-target="5000" data-prefix="+">0</strong>
           <span>Proyectos instalados</span>
@@ -139,10 +139,6 @@
         <article class="metric-card">
           <strong class="metric-value" data-target="12" data-suffix="+">0</strong>
           <span>Años de experiencia</span>
-        </article>
-        <article class="metric-card">
-          <strong class="metric-value" data-target="4">0</strong>
-          <span>Lineas de calidad</span>
         </article>
         <article class="metric-card">
           <strong class="metric-value" data-target="92" data-suffix="%">0</strong>
@@ -161,52 +157,116 @@
         </div>
       </div>
 
-      <div class="collage-grid">
-        <button class="collage-item ci-1" data-index="0" aria-label="Ver proyecto 1">
-          <img src="img/Trabajos/1.png" alt="Proyecto 1 - Marmoles Villalobos" loading="lazy">
-          <span class="collage-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-        </button>
-        <button class="collage-item ci-2" data-index="1" aria-label="Ver proyecto 2">
-          <img src="img/Trabajos/2.jpeg" alt="Proyecto 2 - Marmoles Villalobos" loading="lazy">
-          <span class="collage-overlay"><i class="fa-solid fa-magn|ifying-glass-plus"></i></span>
-        </button>
-        <button class="collage-item ci-3" data-index="2" aria-label="Ver proyecto 3">
-          <img src="img/Trabajos/3.jpeg" alt="Proyecto 3 - Marmoleria Villalobos" loading="lazy">
-          <span class="collage-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-        </button>
-        <button class="collage-item ci-3" data-index="2" aria-label="Ver proyecto 3">
-          <img src="img/Trabajos/3.jpeg" alt="Proyecto 3 - Marmoles Villalobos" loading="lazy">
-          <span class="collage-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-        </button>
-        <button class="collage-item ci-4" data-index="3" aria-label="Ver proyecto 4">
-          <img src="img/Trabajos/4.png" alt="Proyecto 4 - Marmoles Villalobos" loading="lazy">
-          <span class="collage-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-        </button>
-        <button class="collage-item ci-5" data-index="4" aria-label="Ver proyecto 5">
-          <img src="img/Trabajos/5.png" alt="Proyecto 5 - Marmoles Villalobos" loading="lazy">
-          <span class="collage-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-        </button>
-        <button class="collage-item ci-6" data-index="5" aria-label="Ver proyecto 6">
-          <img src="img/Trabajos/6.png" alt="Proyecto 6 - Marmoles Villalobos" loading="lazy">
-          <span class="collage-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-        </button>
-        <button class="collage-item ci-7" data-index="6" aria-label="Ver proyecto 7">
-          <img src="img/Trabajos/7.png" alt="Proyecto 7 - Marmoles Villalobos" loading="lazy">
-          <span class="collage-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-        </button>
-        <button class="collage-item ci-8" data-index="7" aria-label="Ver proyecto 8">
-          <img src="img/Trabajos/8.png" alt="Proyecto 8 - Marmoles Villalobos" loading="lazy">
-          <span class="collage-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-        </button>
-        <button class="collage-item ci-9" data-index="8" aria-label="Ver proyecto 9">
-          <img src="img/Trabajos/9.png" alt="Proyecto 9 - Marmoles Villalobos" loading="lazy">
-          <span class="collage-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-        </button>
-        <button class="collage-item ci-10" data-index="9" aria-label="Ver proyecto 10">
-          <img src="img/Trabajos/10.png" alt="Proyecto 10 - Marmoles Villalobos" loading="lazy">
-          <span class="collage-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-        </button>
+      <div>
+        <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+          <button id="tab-imagenes" class="button button-secondary" type="button" onclick="mostrarGaleria('imagenes')">Imágenes</button>
+          <button id="tab-videos" class="button button-secondary" type="button" onclick="mostrarGaleria('videos')">Videos</button>
+        </div>
+        <div id="galeria-imagenes" class="collage-grid">
+          <button class="collage-item ci-1" data-index="0" aria-label="Ver proyecto 1">
+            <img src="img/Trabajos/1.png" alt="Proyecto 1 - Marmoles Villalobos" loading="lazy">
+            <span class="collage-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </button>
+          <button class="collage-item ci-2" data-index="1" aria-label="Ver proyecto 2">
+            <img src="img/Trabajos/2.jpeg" alt="Proyecto 2 - Marmoles Villalobos" loading="lazy">
+            <span class="collage-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </button>
+          <button class="collage-item ci-3" data-index="2" aria-label="Ver proyecto 3">
+            <img src="img/Trabajos/3.jpeg" alt="Proyecto 3 - Marmoleria Villalobos" loading="lazy">
+            <span class="collage-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </button>
+          <button class="collage-item ci-3" data-index="2" aria-label="Ver proyecto 3">
+            <img src="img/Trabajos/3.jpeg" alt="Proyecto 3 - Marmoles Villalobos" loading="lazy">
+            <span class="collage-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </button>
+          <button class="collage-item ci-4" data-index="3" aria-label="Ver proyecto 4">
+            <img src="img/Trabajos/4.png" alt="Proyecto 4 - Marmoles Villalobos" loading="lazy">
+            <span class="collage-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </button>
+          <button class="collage-item ci-5" data-index="4" aria-label="Ver proyecto 5">
+            <img src="img/Trabajos/5.png" alt="Proyecto 5 - Marmoles Villalobos" loading="lazy">
+            <span class="collage-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </button>
+          <button class="collage-item ci-6" data-index="5" aria-label="Ver proyecto 6">
+            <img src="img/Trabajos/6.png" alt="Proyecto 6 - Marmoles Villalobos" loading="lazy">
+            <span class="collage-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </button>
+          <button class="collage-item ci-7" data-index="6" aria-label="Ver proyecto 7">
+            <img src="img/Trabajos/7.png" alt="Proyecto 7 - Marmoles Villalobos" loading="lazy">
+            <span class="collage-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </button>
+          <button class="collage-item ci-8" data-index="7" aria-label="Ver proyecto 8">
+            <img src="img/Trabajos/8.png" alt="Proyecto 8 - Marmoles Villalobos" loading="lazy">
+            <span class="collage-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </button>
+          <button class="collage-item ci-9" data-index="8" aria-label="Ver proyecto 9">
+            <img src="img/Trabajos/9.png" alt="Proyecto 9 - Marmoles Villalobos" loading="lazy">
+            <span class="collage-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </button>
+          <button class="collage-item ci-10" data-index="9" aria-label="Ver proyecto 10">
+            <img src="img/Trabajos/10.png" alt="Proyecto 10 - Marmoles Villalobos" loading="lazy">
+            <span class="collage-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </button>
+          <button class="collage-item ci-11" data-index="10" aria-label="Ver proyecto 11">
+            <img src="img/Trabajos/11.jpeg" alt="Proyecto 11 - Marmoles Villalobos" loading="lazy">
+            <span class="collage-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </button>
+          <button class="collage-item ci-12" data-index="11" aria-label="Ver proyecto 12">
+            <img src="img/Trabajos/12.jpeg" alt="Proyecto 12 - Marmoles Villalobos" loading="lazy">
+            <span class="collage-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </button>
+          <button class="collage-item ci-13" data-index="12" aria-label="Ver proyecto 13">
+            <img src="img/Trabajos/13.jpeg" alt="Proyecto 13 - Marmoles Villalobos" loading="lazy">
+            <span class="collage-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </button>
+          <button class="collage-item ci-15" data-index="13" aria-label="Ver proyecto 15">
+            <img src="img/Trabajos/15.jpeg" alt="Proyecto 15 - Marmoles Villalobos" loading="lazy">
+            <span class="collage-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </button>
+        </div>
+        <div id="galeria-videos" class="collage-grid" style="display:none;">
+          <div class="collage-item ci-14" style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; background: #111;">
+            <video controls style="width:100%; max-width:600px; border-radius:12px; background:#000;">
+              <source src="video/14.mp4" type="video/mp4">
+              Tu navegador no soporta la reproducción de video.
+            </video>
+          </div>
+          <div class="collage-item ci-16" style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; background: #111;">
+            <video controls style="width:100%; max-width:600px; border-radius:12px; background:#000;">
+              <source src="video/16.mp4" type="video/mp4">
+              Tu navegador no soporta la reproducción de video.
+            </video>
+          </div>
+        </div>
       </div>
+    <script>
+      // Tabs galería
+      function mostrarGaleria(tipo) {
+        const btnImg = document.getElementById('tab-imagenes');
+        const btnVid = document.getElementById('tab-videos');
+        const galImg = document.getElementById('galeria-imagenes');
+        const galVid = document.getElementById('galeria-videos');
+        if (tipo === 'imagenes') {
+          galImg.style.display = '';
+          galVid.style.display = 'none';
+          btnImg.classList.add('button-primary');
+          btnImg.classList.remove('button-secondary');
+          btnVid.classList.remove('button-primary');
+          btnVid.classList.add('button-secondary');
+        } else {
+          galImg.style.display = 'none';
+          galVid.style.display = '';
+          btnVid.classList.add('button-primary');
+          btnVid.classList.remove('button-secondary');
+          btnImg.classList.remove('button-primary');
+          btnImg.classList.add('button-secondary');
+        }
+      }
+      // Mostrar imágenes por defecto
+      document.addEventListener('DOMContentLoaded', function() {
+        mostrarGaleria('imagenes');
+      });
+    </script>
     </section>
 
     <section class="section" id="servicios">
