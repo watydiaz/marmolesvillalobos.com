@@ -14,6 +14,134 @@
     referrerpolicy="no-referrer">
   <link rel="stylesheet" href="css/styles.css">
       <style>
+            @media (max-width: 900px) {
+              .site-header {
+                position: sticky;
+                top: 0;
+                z-index: 2002;
+                background: rgba(252, 251, 248, 0.97);
+                border-bottom: 1.5px solid #e7e2d8;
+                box-shadow: 0 2px 18px rgba(0,0,0,0.07);
+                transition: background 0.3s;
+              }
+              .site-header.menu-open {
+                background: #181818 !important;
+                box-shadow: 0 2px 18px rgba(0,0,0,0.13);
+                border-bottom: none;
+              }
+              .site-header.menu-open {
+                background: #181818 !important;
+              }
+              .nav-bar {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                gap: 0.2em;
+                width: 100%;
+                padding: 0.5em 1em;
+                min-height: 64px;
+              }
+              .nav-mobile-wrap {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 0.7em;
+                width: 100%;
+              }
+              .brand {
+                flex-direction: row;
+                align-items: center;
+                gap: 0.5em;
+                margin-bottom: 0;
+              }
+              .brand-logo {
+                width: 44px;
+                height: 44px;
+                margin-bottom: 0;
+                background: transparent;
+                box-shadow: none;
+                border-radius: 0;
+              }
+              .brand-text {
+                text-align: left;
+                font-size: 1.1rem;
+                margin-bottom: 0;
+                color: #fff;
+                font-weight: 700;
+                letter-spacing: 0.08em;
+              }
+              .nav-toggle {
+                display: flex;
+                margin-left: auto;
+              }
+            }
+          /* Drawer lateral para menú móvil */
+          .nav-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,0.38);
+            z-index: 1000;
+            pointer-events: none;
+            transition: opacity 0.3s;
+          }
+          .nav-overlay.active {
+            display: block;
+            pointer-events: auto;
+          }
+          @media (max-width: 900px) {
+            .site-nav {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 82vw;
+              max-width: 340px;
+              height: 100vh;
+              background: #101012;
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: flex-start;
+              gap: 1.1rem;
+              font-size: 0.98rem;
+              z-index: 1001;
+              transform: translateX(-100vw);
+              opacity: 1;
+              pointer-events: none;
+              transition: transform 0.38s cubic-bezier(.7,1.7,.6,1);
+              box-shadow: 4px 0 32px rgba(0,0,0,0.28);
+              padding: 2.2rem 1.2rem 1.2rem 1.2rem;
+            }
+            .site-nav.nav-open {
+              transform: translateX(0);
+              pointer-events: auto;
+            }
+            .site-nav a {
+              color: #fff;
+              font-weight: 700;
+              letter-spacing: 0.06em;
+              padding: 0.7em 1.1em;
+              border-radius: 999px;
+              transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+              width: 100%;
+              display: block;
+              text-align: left;
+              font-size: 1em;
+              margin-bottom: 0.18em;
+              text-shadow: 0 2px 12px rgba(0,0,0,0.18);
+            }
+            .site-nav a:hover {
+              background: #ef7d12;
+              color: #fff;
+              box-shadow: 0 2px 18px rgba(239,125,18,0.13);
+            }
+            .desktop-cta {
+              display: none !important;
+            }
+          }
         /* Animación pulsante y brillo para el botón Cotiza ya */
         .cotiza-ya-anim {
           position: relative;
@@ -67,16 +195,21 @@
 <body>
   <header class="site-header">
     <div class="container nav-bar">
-      <a class="brand" href="#inicio" aria-label="Ir al inicio de Marmoleria Villalobos">
-        <img src="img/image.png" alt="Logo de Marmoleria Villalobos" class="brand-logo">
-        <span class="brand-text">
-          <strong>Marmoles Villalobos</strong>
-          <!-- <span>Villalobos</span>
-            <span>Marhvill</span> -->
-        </span>
-      </a>
-
-      <nav class="site-nav" aria-label="Principal">
+      <div class="nav-overlay" id="nav-overlay"></div>
+      <div class="nav-mobile-wrap">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio de Marmoleria Villalobos">
+          <img src="img/image.png" alt="Logo de Marmoleria Villalobos" class="brand-logo">
+          <span class="brand-text">
+            <strong>Marmoles Villalobos</strong>
+          </span>
+        </a>
+        <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="site-nav-menu">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+      </div>
+      <nav class="site-nav" id="site-nav-menu" aria-label="Principal">
         <a href="#inicio">Inicio</a>
         <a href="#beneficios">Valores</a>
         <a href="#metricas">Metricas</a>
@@ -88,9 +221,132 @@
         <a href="#contacto">Contacto</a>
         <a href="#ubicacion">Ubicación</a>
       </nav>
-
       <a class="button button-primary desktop-cta" href="#contacto">Cotiza ahora</a>
     </div>
+  </head>
+  <style>
+    /* NAV MOBILE */
+    .nav-mobile-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      gap: 0.2em;
+    }
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 44px;
+      height: 44px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-top: 0.2em;
+      z-index: 1002;
+    }
+    .nav-toggle-bar {
+      width: 28px;
+      height: 4px;
+      background: #ef7d12;
+      margin: 3px 0;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+    @media (max-width: 900px) {
+      .nav-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.2em;
+      }
+      .brand {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.2em;
+        margin-bottom: 0.2em;
+      }
+      .brand-logo {
+        margin-bottom: 0.2em;
+      }
+      .brand-text {
+        text-align: center;
+        font-size: 1.1rem;
+        margin-bottom: 0.2em;
+      }
+      .nav-toggle {
+        display: flex;
+      }
+      .site-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #181818;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2.2rem;
+        font-size: 1.35rem;
+        z-index: 1001;
+        transform: translateY(-100vh);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.38s cubic-bezier(.7,1.7,.6,1), opacity 0.38s;
+        touch-action: auto;
+        user-select: auto;
+      }
+      .site-nav.nav-open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .site-nav a {
+        color: #fff;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        padding: 0.7em 1.2em;
+        border-radius: 999px;
+        transition: background 0.2s, color 0.2s;
+      }
+      .site-nav a:hover {
+        background: #ef7d12;
+        color: #fff;
+      }
+      .desktop-cta {
+        display: none !important;
+      }
+    }
+  </style>
+  <script>
+    // NAV MOBILE
+    document.addEventListener('DOMContentLoaded', function () {
+      const navToggle = document.querySelector('.nav-toggle');
+      const navMenu = document.getElementById('site-nav-menu');
+      const navOverlay = document.getElementById('nav-overlay');
+      if (!navToggle || !navMenu || !navOverlay) return;
+      function closeMenu() {
+        navMenu.classList.remove('nav-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+        document.querySelector('.site-header').classList.remove('menu-open');
+      }
+      navToggle.addEventListener('click', function () {
+        const open = navMenu.classList.toggle('nav-open');
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        navOverlay.classList.toggle('active', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+        document.querySelector('.site-header').classList.toggle('menu-open', open);
+      });
+      navOverlay.addEventListener('click', closeMenu);
+      // Cerrar menú al hacer click en un enlace
+      navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
+    });
+  </script>
   </header>
   <main>
     <section class="hero" id="inicio">
