@@ -118,20 +118,25 @@
 
         <article>
           <strong>Innovacion</strong>
-          <p>Nos mantenemos a la vanguardia en diseños, tendencias y materiales como marmol, granito, y quarztone, creando espacio moderno y unicos.</p>
+          <p>Nos mantenemos a la vanguardia en diseños, tendencias y materiales como marmol, granito, y quarztone,
+            creando espacio moderno y unicos.</p>
         </article>
         <article>
           <strong>Atencion</strong>
-          <p>Acompañamos a cada cliente de principio a fin atendiendo sus necesidades para ofrecer soluciones a su medida. </p>
+          <p>Acompañamos a cada cliente de principio a fin atendiendo sus necesidades para ofrecer soluciones a su
+            medida. </p>
         </article>
       </div>
     </section><br>
 
     <section class="metrics-strip" id="metricas" aria-label="Metricas de Marmoleria Villalobos">
-       <div class="container">
-        <h2><center>Un poco de nuestros numeros</center></h2>
+      <div class="container">
+        <h2>
+          <center>Un poco de nuestros numeros</center>
+        </h2>
       </div>
-      <div class="container metrics-grid" style="grid-template-columns: repeat(3, minmax(0, 1fr)); justify-items: center;">
+      <div class="container metrics-grid"
+        style="grid-template-columns: repeat(3, minmax(0, 1fr)); justify-items: center;">
         <article class="metric-card">
           <strong class="metric-value" data-target="5000" data-prefix="+">0</strong>
           <span>Proyectos instalados</span>
@@ -159,8 +164,10 @@
 
       <div>
         <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
-          <button id="tab-imagenes" class="button button-secondary" type="button" onclick="mostrarGaleria('imagenes')">Imágenes</button>
-          <button id="tab-videos" class="button button-secondary" type="button" onclick="mostrarGaleria('videos')">Videos</button>
+          <button id="tab-imagenes" class="button button-secondary" type="button"
+            onclick="mostrarGaleria('imagenes')">Imágenes</button>
+          <button id="tab-videos" class="button button-secondary" type="button"
+            onclick="mostrarGaleria('videos')">Videos</button>
         </div>
         <div id="galeria-imagenes" class="collage-grid">
           <button class="collage-item ci-1" data-index="0" aria-label="Ver proyecto 1">
@@ -225,88 +232,98 @@
           </button>
         </div>
         <div id="galeria-videos" class="collage-grid" style="display:none; justify-items: center;">
-          <button class="collage-item ci-14" style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; background: #111; border:none; cursor:pointer;" onclick="abrirModalVideo('video/14.mp4')" aria-label="Ver video 14">
-            <span style="display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; height:100%; color:#fff;">
+          <button class="collage-item ci-14"
+            style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; background: #111; border:none; cursor:pointer;"
+            onclick="abrirModalVideo('video/14.mp4')" aria-label="Ver video 14">
+            <span
+              style="display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; height:100%; color:#fff;">
               <i class="fa-solid fa-circle-play" style="font-size:4rem; margin-bottom:0.5rem;"></i>
               <span>Video 14</span>
             </span>
           </button>
-          <button class="collage-item ci-16" style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; background: #111; border:none; cursor:pointer;" onclick="abrirModalVideo('video/16.mp4')" aria-label="Ver video 16">
-            <span style="display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; height:100%; color:#fff;">
+          <button class="collage-item ci-16"
+            style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; background: #111; border:none; cursor:pointer;"
+            onclick="abrirModalVideo('video/16.mp4')" aria-label="Ver video 16">
+            <span
+              style="display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; height:100%; color:#fff;">
               <i class="fa-solid fa-circle-play" style="font-size:4rem; margin-bottom:0.5rem;"></i>
               <span>Video 16</span>
             </span>
           </button>
         </div>
-      <!-- Modal para videos -->
-      <div class="lightbox" id="video-lightbox" role="dialog" aria-modal="true" aria-label="Visor de video" hidden style="background:rgba(5,5,5,0.94);">
-        <button class="lb-close" id="video-lb-close" aria-label="Cerrar" style="position:absolute;top:1.2rem;right:1.4rem;"><i class="fa-solid fa-xmark"></i></button>
-        <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;width:100vw;height:100vh;max-width:900px;max-height:90vh;margin:auto;">
-          <video id="video-modal-player" controls style="width:100%;max-width:800px;max-height:80vh;border-radius:14px;background:#000;outline:none;box-shadow:0 8px 32px rgba(0,0,0,0.18);">
-            <source src="" type="video/mp4">
-            Tu navegador no soporta la reproducción de video.
-          </video>
+        <!-- Modal para videos -->
+        <div class="lightbox" id="video-lightbox" role="dialog" aria-modal="true" aria-label="Visor de video" hidden
+          style="background:rgba(5,5,5,0.94);">
+          <button class="lb-close" id="video-lb-close" aria-label="Cerrar"
+            style="position:absolute;top:1.2rem;right:1.4rem;"><i class="fa-solid fa-xmark"></i></button>
+          <div
+            style="display:flex;flex-direction:column;align-items:center;justify-content:center;width:100vw;height:100vh;max-width:900px;max-height:90vh;margin:auto;">
+            <video id="video-modal-player" controls
+              style="width:100%;max-width:800px;max-height:80vh;border-radius:14px;background:#000;outline:none;box-shadow:0 8px 32px rgba(0,0,0,0.18);">
+              <source src="" type="video/mp4">
+              Tu navegador no soporta la reproducción de video.
+            </video>
+          </div>
         </div>
+        <script>
+          // Modal de video
+          function abrirModalVideo(src) {
+            const modal = document.getElementById('video-lightbox');
+            const player = document.getElementById('video-modal-player');
+            player.src = src;
+            modal.hidden = false;
+            document.body.style.overflow = 'hidden';
+            player.currentTime = 0;
+            player.play();
+            setTimeout(() => player.focus(), 200);
+          }
+          function cerrarModalVideo() {
+            const modal = document.getElementById('video-lightbox');
+            const player = document.getElementById('video-modal-player');
+            player.pause();
+            player.src = '';
+            modal.hidden = true;
+            document.body.style.overflow = '';
+          }
+          document.getElementById('video-lb-close').onclick = cerrarModalVideo;
+          document.getElementById('video-lightbox').addEventListener('click', function (e) {
+            if (e.target === this) cerrarModalVideo();
+          });
+          document.addEventListener('keydown', function (e) {
+            const modal = document.getElementById('video-lightbox');
+            if (modal.hidden) return;
+            if (e.key === 'Escape') cerrarModalVideo();
+          });
+        </script>
       </div>
       <script>
-        // Modal de video
-        function abrirModalVideo(src) {
-          const modal = document.getElementById('video-lightbox');
-          const player = document.getElementById('video-modal-player');
-          player.src = src;
-          modal.hidden = false;
-          document.body.style.overflow = 'hidden';
-          player.currentTime = 0;
-          player.play();
-          setTimeout(()=>player.focus(), 200);
+        // Tabs galería
+        function mostrarGaleria(tipo) {
+          const btnImg = document.getElementById('tab-imagenes');
+          const btnVid = document.getElementById('tab-videos');
+          const galImg = document.getElementById('galeria-imagenes');
+          const galVid = document.getElementById('galeria-videos');
+          if (tipo === 'imagenes') {
+            galImg.style.display = '';
+            galVid.style.display = 'none';
+            btnImg.classList.add('button-primary');
+            btnImg.classList.remove('button-secondary');
+            btnVid.classList.remove('button-primary');
+            btnVid.classList.add('button-secondary');
+          } else {
+            galImg.style.display = 'none';
+            galVid.style.display = '';
+            btnVid.classList.add('button-primary');
+            btnVid.classList.remove('button-secondary');
+            btnImg.classList.remove('button-primary');
+            btnImg.classList.add('button-secondary');
+          }
         }
-        function cerrarModalVideo() {
-          const modal = document.getElementById('video-lightbox');
-          const player = document.getElementById('video-modal-player');
-          player.pause();
-          player.src = '';
-          modal.hidden = true;
-          document.body.style.overflow = '';
-        }
-        document.getElementById('video-lb-close').onclick = cerrarModalVideo;
-        document.getElementById('video-lightbox').addEventListener('click', function(e) {
-          if (e.target === this) cerrarModalVideo();
-        });
-        document.addEventListener('keydown', function(e) {
-          const modal = document.getElementById('video-lightbox');
-          if (modal.hidden) return;
-          if (e.key === 'Escape') cerrarModalVideo();
+        // Mostrar imágenes por defecto
+        document.addEventListener('DOMContentLoaded', function () {
+          mostrarGaleria('imagenes');
         });
       </script>
-      </div>
-    <script>
-      // Tabs galería
-      function mostrarGaleria(tipo) {
-        const btnImg = document.getElementById('tab-imagenes');
-        const btnVid = document.getElementById('tab-videos');
-        const galImg = document.getElementById('galeria-imagenes');
-        const galVid = document.getElementById('galeria-videos');
-        if (tipo === 'imagenes') {
-          galImg.style.display = '';
-          galVid.style.display = 'none';
-          btnImg.classList.add('button-primary');
-          btnImg.classList.remove('button-secondary');
-          btnVid.classList.remove('button-primary');
-          btnVid.classList.add('button-secondary');
-        } else {
-          galImg.style.display = 'none';
-          galVid.style.display = '';
-          btnVid.classList.add('button-primary');
-          btnVid.classList.remove('button-secondary');
-          btnImg.classList.remove('button-primary');
-          btnImg.classList.add('button-secondary');
-        }
-      }
-      // Mostrar imágenes por defecto
-      document.addEventListener('DOMContentLoaded', function() {
-        mostrarGaleria('imagenes');
-      });
-    </script>
     </section>
 
     <section class="section" id="servicios">
@@ -314,12 +331,14 @@
         <div class="section-heading">
           <p class="eyebrow">Servicios</p>
           <h2>Trabajos hechos para durar y lucir impecables.</h2>
-          <p>Especialistas en mesones y barras en mármol y piedra natural. Consulta por WhatsApp y recibe asesoría personalizada para tu proyecto.</p>
+          <p>Especialistas en mesones y barras en mármol y piedra natural. Consulta por WhatsApp y recibe asesoría
+            personalizada para tu proyecto.</p>
         </div>
         <div class="cards-grid services-grid">
           <article class="service-card">
             <h3>Mesones para cocina</h3>
-            <p>Diseño, fabricación e instalación de mesones en mármol, granito y cuarzo, hechos a medida para tu cocina.</p>
+            <p>Diseño, fabricación e instalación de mesones en mármol, granito y cuarzo, hechos a medida para tu cocina.
+            </p>
           </article>
           <article class="service-card">
             <h3>Barras</h3>
@@ -335,7 +354,8 @@
           </article>
         </div>
         <div style="text-align:center; margin-top:2.5rem;">
-          <a class="button button-primary" href="https://wa.me/573152342955" target="_blank" rel="noopener noreferrer" style="font-size:1.15rem; padding:1rem 2.2rem;">
+          <a class="button button-primary" href="https://wa.me/573152342955" target="_blank" rel="noopener noreferrer"
+            style="font-size:1.15rem; padding:1rem 2.2rem;">
             Solicita tu cotización por WhatsApp <i class="fa-brands fa-whatsapp" style="margin-left:0.5em;"></i>
           </a>
         </div>
@@ -350,17 +370,17 @@
           <p>Explora las principales categorías y descubre los diferentes tipos disponibles en cada una.</p>
         </div>
         <div class="catalogo-materiales-grid">
-          <button class="material-categoria-card" onclick="abrirModalMaterial('granito')">
-            <img src="img/materiales/marmol-granito/aspe.jpg" alt="Granitos y Mármoles" loading="lazy" style="object-fit:cover; width:100%; height:120px; border-radius:14px 14px 0 0;">
-            <span>Granitos y Mármoles</span>
+          <button class="material-categoria-card" onclick="abrirModalMaterial('granito')"
+            style="background: linear-gradient(135deg, #232526 70%, #e2b76a 100%); box-shadow:0 4px 24px rgba(226,183,106,0.08); min-height:170px; display:flex;flex-direction:column;justify-content:center;align-items:center;">
+            <span style="color:#e2b76a; font-weight:600; font-size:1.25rem;">Granitos y Mármoles</span>
           </button>
-          <button class="material-categoria-card" onclick="abrirModalMaterial('quartztone')">
-            <img src="img/materiales/quarztone/blanco calacatta.jpg" alt="Quartztone" loading="lazy" style="object-fit:cover; width:100%; height:120px; border-radius:14px 14px 0 0;">
-            <span>Quartztone</span>
+          <button class="material-categoria-card" onclick="abrirModalMaterial('quartztone')"
+            style="background: linear-gradient(135deg, #232526 70%, #4fd1c5 100%); box-shadow:0 4px 24px rgba(79,209,197,0.08); min-height:170px; display:flex;flex-direction:column;justify-content:center;align-items:center;">
+            <span style="color:#4fd1c5; font-weight:600; font-size:1.25rem;">Quartztone</span>
           </button>
-          <button class="material-categoria-card" onclick="abrirModalMaterial('sinterizado')">
-            <img src="img/materiales/sinterizado/statuario.png" alt="Sinterizado" loading="lazy" style="object-fit:cover; width:100%; height:120px; border-radius:14px 14px 0 0;">
-            <span>Sinterizado</span>
+          <button class="material-categoria-card" onclick="abrirModalMaterial('sinterizado')"
+            style="background: linear-gradient(135deg, #232526 70%, #a3ff8f 100%); box-shadow:0 4px 24px rgba(163,255,143,0.08); min-height:170px; display:flex;flex-direction:column;justify-content:center;align-items:center;">
+            <span style="color:#7ecb5c; font-weight:600; font-size:1.25rem;">Sinterizado</span>
           </button>
         </div>
         <!-- Modal Granitos y Mármoles -->
@@ -369,12 +389,18 @@
             <button class="modal-close" onclick="cerrarModalMaterial('granito')" aria-label="Cerrar">&times;</button>
             <h3>Granitos y Mármoles</h3>
             <div class="material-gallery">
-              <div class="material-gallery-item"><img src="img/materiales/marmol-granito/aspe.jpg" alt="Aspe"><span>Aspe</span></div>
-              <div class="material-gallery-item"><img src="img/materiales/marmol-granito/marron caribe.jpg" alt="Marrón Caribe"><span>Marrón Caribe</span></div>
-              <div class="material-gallery-item"><img src="img/materiales/marmol-granito/aspe egipcio.jpg" alt="Aspe Egipcio"><span>Aspe Egipcio</span></div>
-              <div class="material-gallery-item"><img src="img/materiales/marmol-granito/verde ubutuba.jpg" alt="Verde Ubatuba"><span>Verde Ubatuba</span></div>
-              <div class="material-gallery-item"><img src="img/materiales/marmol-granito/negro san gabriel.jpg" alt="Negro San Gabriel"><span>Negro San Gabriel</span></div>
-              <div class="material-gallery-item"><img src="img/materiales/marmol-granito/negro absoluto.jpg" alt="Negro Absoluto"><span>Negro Absoluto</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/marmol-granito/aspe.jpg"
+                  alt="Aspe"><span>Aspe</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/marmol-granito/marron caribe.jpg"
+                  alt="Marrón Caribe"><span>Marrón Caribe</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/marmol-granito/aspe egipcio.jpg"
+                  alt="Aspe Egipcio"><span>Aspe Egipcio</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/marmol-granito/verde ubutuba.jpg"
+                  alt="Verde Ubatuba"><span>Verde Ubatuba</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/marmol-granito/negro san gabriel.jpg"
+                  alt="Negro San Gabriel"><span>Negro San Gabriel</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/marmol-granito/negro absoluto.jpg"
+                  alt="Negro Absoluto"><span>Negro Absoluto</span></div>
             </div>
           </div>
         </div>
@@ -385,15 +411,24 @@
             <button class="modal-close" onclick="cerrarModalMaterial('quartztone')" aria-label="Cerrar">&times;</button>
             <h3>Quartztone</h3>
             <div class="material-gallery">
-              <div class="material-gallery-item"><img src="img/materiales/quarztone/blanco calacatta.jpg" alt="Blanco Calacatta"><span>Blanco Calacatta</span></div>
-              <div class="material-gallery-item"><img src="img/materiales/quarztone/blanco estelar.webp" alt="Blanco Estelar"><span>Blanco Estelar</span></div>
-              <div class="material-gallery-item"><img src="img/materiales/quarztone/blanco extra.png" alt="Blanco Extra"><span>Blanco Extra</span></div>
-              <div class="material-gallery-item"><img src="img/materiales/quarztone/blanco polar.png" alt="Blanco Polar"><span>Blanco Polar</span></div>
-              <div class="material-gallery-item"><img src="img/materiales/quarztone/gris absoluto.jpg" alt="Gris Absoluto"><span>Gris Absoluto</span></div>
-              <div class="material-gallery-item"><img src="img/materiales/quarztone/gris llovizna.jpg" alt="Gris Llovizna"><span>Gris Llovizna</span></div>
-              <div class="material-gallery-item"><img src="img/materiales/quarztone/sand beige.jpg" alt="Sand Beige"><span>Sand Beige</span></div>
-              <div class="material-gallery-item"><img src="img/materiales/quarztone/star black.jpg" alt="Star Black"><span>Star Black</span></div>
-              <div class="material-gallery-item"><img src="img/materiales/quarztone/star white.jpg" alt="Star White"><span>Star White</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/quarztone/blanco calacatta.jpg"
+                  alt="Blanco Calacatta"><span>Blanco Calacatta</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/quarztone/blanco estelar.webp"
+                  alt="Blanco Estelar"><span>Blanco Estelar</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/quarztone/blanco extra.png"
+                  alt="Blanco Extra"><span>Blanco Extra</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/quarztone/blanco polar.png"
+                  alt="Blanco Polar"><span>Blanco Polar</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/quarztone/gris absoluto.jpg"
+                  alt="Gris Absoluto"><span>Gris Absoluto</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/quarztone/gris llovizna.jpg"
+                  alt="Gris Llovizna"><span>Gris Llovizna</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/quarztone/sand beige.jpg"
+                  alt="Sand Beige"><span>Sand Beige</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/quarztone/star black.jpg"
+                  alt="Star Black"><span>Star Black</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/quarztone/star white.jpg"
+                  alt="Star White"><span>Star White</span></div>
             </div>
           </div>
         </div>
@@ -401,45 +436,60 @@
         <!-- Modal Sinterizado -->
         <div class="modal-material" id="modal-material-sinterizado" aria-modal="true" role="dialog" hidden>
           <div class="modal-material-content">
-            <button class="modal-close" onclick="cerrarModalMaterial('sinterizado')" aria-label="Cerrar">&times;</button>
+            <button class="modal-close" onclick="cerrarModalMaterial('sinterizado')"
+              aria-label="Cerrar">&times;</button>
             <h3>Sinterizado</h3>
             <div class="material-gallery">
-              <div class="material-gallery-item"><img src="img/materiales/sinterizado/statuario.png" alt="Estatuario"><span>Estatuario</span></div>
-              <div class="material-gallery-item"><img src="img/materiales/sinterizado/borguini.jpg" alt="Borguini"><span>Borguini</span></div>
-              <div class="material-gallery-item"><img src="img/materiales/sinterizado/blanco puro.webp" alt="Blanco Puro"><span>Blanco Puro</span></div>
-              <div class="material-gallery-item"><img src="img/materiales/sinterizado/negro marquina.webp" alt="Negro Marquina"><span>Negro Marquina</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/sinterizado/statuario.png"
+                  alt="Estatuario"><span>Estatuario</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/sinterizado/borguini.jpg"
+                  alt="Borguini"><span>Borguini</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/sinterizado/blanco puro.webp"
+                  alt="Blanco Puro"><span>Blanco Puro</span></div>
+              <div class="material-gallery-item"><img src="img/materiales/sinterizado/negro marquina.webp"
+                  alt="Negro Marquina"><span>Negro Marquina</span></div>
             </div>
           </div>
         </div>
+      </div><br>
+
+      <div style="text-align:center; margin-top:2.5rem;">
+        <a class="button button-primary" href="https://wa.me/573152342955" target="_blank" rel="noopener noreferrer"
+          style="font-size:1.18rem; padding:1.1rem 2.5rem; border-radius:999px; box-shadow:0 8px 32px rgba(239,125,18,0.13); display:inline-flex; align-items:center; gap:0.7em;">
+          <i class="fa-brands fa-whatsapp" style="font-size:1.5em;"></i>
+          Cotiza ya
+        </a>
       </div>
+
     </section>
-<script>
-  function abrirModalMaterial(cat) {
-    const modal = document.getElementById('modal-material-' + cat);
-    modal.hidden = false;
-    document.body.style.overflow = 'hidden';
-    // Cerrar con click fuera
-    modal.addEventListener('mousedown', function handler(e) {
-      if (e.target === modal) {
-        cerrarModalMaterial(cat);
-        modal.removeEventListener('mousedown', handler);
+
+    <script>
+      function abrirModalMaterial(cat) {
+        const modal = document.getElementById('modal-material-' + cat);
+        modal.hidden = false;
+        document.body.style.overflow = 'hidden';
+        // Cerrar con click fuera
+        modal.addEventListener('mousedown', function handler(e) {
+          if (e.target === modal) {
+            cerrarModalMaterial(cat);
+            modal.removeEventListener('mousedown', handler);
+          }
+        });
+        // Cerrar con ESC
+        function escHandler(e) {
+          if (e.key === 'Escape') {
+            cerrarModalMaterial(cat);
+            document.removeEventListener('keydown', escHandler);
+          }
+        }
+        document.addEventListener('keydown', escHandler);
       }
-    });
-    // Cerrar con ESC
-    function escHandler(e) {
-      if (e.key === 'Escape') {
-        cerrarModalMaterial(cat);
-        document.removeEventListener('keydown', escHandler);
+      function cerrarModalMaterial(cat) {
+        const modal = document.getElementById('modal-material-' + cat);
+        modal.hidden = true;
+        document.body.style.overflow = '';
       }
-    }
-    document.addEventListener('keydown', escHandler);
-  }
-  function cerrarModalMaterial(cat) {
-    const modal = document.getElementById('modal-material-' + cat);
-    modal.hidden = true;
-    document.body.style.overflow = '';
-  }
-</script>
+    </script>
 
 
     <section class="section process-section" id="proceso-marmol">
