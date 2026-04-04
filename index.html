@@ -13,6 +13,55 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     referrerpolicy="no-referrer">
   <link rel="stylesheet" href="css/styles.css">
+      <style>
+        /* Animación pulsante y brillo para el botón Cotiza ya */
+        .cotiza-ya-anim {
+          position: relative;
+          animation: pulse-cotiza 1.7s infinite;
+          overflow: hidden;
+        }
+        @keyframes pulse-cotiza {
+          0% {
+            box-shadow: 0 0 0 0 rgba(239,125,18,0.18);
+            transform: scale(1);
+          }
+          20% {
+            transform: scale(1.08);
+          }
+          40% {
+            transform: scale(1.13);
+          }
+          60% {
+            transform: scale(1.08);
+          }
+          70% {
+            box-shadow: 0 0 0 16px rgba(239,125,18,0);
+            transform: scale(1);
+          }
+          100% {
+            box-shadow: 0 0 0 0 rgba(239,125,18,0.18);
+            transform: scale(1);
+          }
+        }
+        .cotiza-ya-anim::after {
+          content: "";
+          position: absolute;
+          left: -80%;
+          top: 0;
+          width: 80%;
+          height: 100%;
+          background: linear-gradient(120deg, rgba(255,255,255,0.32) 0%, rgba(255,255,255,0.72) 50%, rgba(255,255,255,0.32) 100%);
+          transform: skewX(-24deg);
+          animation: brillo-cotiza 5.5s infinite;
+          pointer-events: none;
+          z-index: 2;
+        }
+        @keyframes brillo-cotiza {
+          0%, 93% { left: -80%; opacity: 0; }
+          97% { left: 110%; opacity: 1; }
+          100% { left: 110%; opacity: 0; }
+        }
+      </style>
 </head>
 
 <body>
@@ -454,11 +503,11 @@
       </div><br>
 
       <div style="text-align:center; margin-top:2.5rem;">
-        <a class="button button-primary" href="https://wa.me/573152342955" target="_blank" rel="noopener noreferrer"
-          style="font-size:1.18rem; padding:1.1rem 2.5rem; border-radius:999px; box-shadow:0 8px 32px rgba(239,125,18,0.13); display:inline-flex; align-items:center; gap:0.7em;">
-          <i class="fa-brands fa-whatsapp" style="font-size:1.5em;"></i>
-          Cotiza ya
-        </a>
+          <a class="button button-primary cotiza-ya-anim" href="https://wa.me/573152342955" target="_blank" rel="noopener noreferrer"
+            style="font-size:1.18rem; padding:1.1rem 2.5rem; border-radius:999px; box-shadow:0 8px 32px rgba(239,125,18,0.13); display:inline-flex; align-items:center; gap:0.7em;">
+            <i class="fa-brands fa-whatsapp" style="font-size:1.5em;"></i>
+            Cotiza ya
+          </a>
       </div>
 
     </section>
