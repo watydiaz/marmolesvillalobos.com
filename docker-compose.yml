@@ -34,6 +34,7 @@ services:
       - ./assets/img:/usr/share/nginx/html/assets/img
       - ./assets/video:/usr/share/nginx/html/assets/video
       - ./js:/usr/share/nginx/html/js
+      - ./favicon.ico:/usr/share/nginx/html/favicon.ico
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.marmolesvillalobos.rule=Host(`marmolesvillalobos.com`)"
