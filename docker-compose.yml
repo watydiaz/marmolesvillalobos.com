@@ -33,6 +33,7 @@ services:
       - ./css:/usr/share/nginx/html/css
       - ./img:/usr/share/nginx/html/img
       - ./video:/usr/share/nginx/html/video
+      - ./js:/usr/share/nginx/html/js
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.marmolesvillalobos.rule=Host(`marmolesvillalobos.com`)"
