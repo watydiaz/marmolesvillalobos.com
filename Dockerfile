@@ -4,7 +4,8 @@ FROM nginx:alpine
 # Copia los archivos estáticos al directorio de Nginx
 COPY ./index.html /usr/share/nginx/html/index.html
 COPY ./css /usr/share/nginx/html/css
-COPY ./img /usr/share/nginx/html/img
+COPY ./assets/img /usr/share/nginx/html/assets/img
+COPY ./assets/video /usr/share/nginx/html/assets/video
 COPY ./js /usr/share/nginx/html/js
 
 # Expone el puerto 80
